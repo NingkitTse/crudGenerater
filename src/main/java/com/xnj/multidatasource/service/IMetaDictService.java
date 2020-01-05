@@ -1,6 +1,6 @@
 package com.xnj.multidatasource.service;
 
-import com.xnj.multidatasource.entity.Test;
+import com.xnj.multidatasource.entity.MetaDict;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author NingkitTse
- * @since 2020-01-04
+ * @since 2020-01-05
  */
-public interface ITestService extends IService<Test> {
+public interface IMetaDictService extends IService<MetaDict> {
 
 }

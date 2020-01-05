@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -9,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.xnj</groupId>
-	<artifactId>multidatasource</artifactId>
+	<artifactId>crudgenerator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>multidatasource</name>
-	<description>Demo project for Spring Boot</description>
+	<name>CrudGenerator</name>
+	<description>Demo project for auto generate crud codes.</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,6 +35,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>3.3.0</version>
 		</dependency>
 
 		<!-- baomidou 自动生成代码依赖 -->
@@ -62,7 +69,7 @@
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc8</artifactId>
-			<version>10.2.0.1.0</version>
+			<version>12.2.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>

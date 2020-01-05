@@ -1,19 +1,10 @@
 package com.xnj.multidatasource.domain;
 
-import java.io.Serializable;
-
 import com.alibaba.fastjson.JSON;
 
-public class BaseValue implements Serializable{
-
-	/**
-	 * 序列化版本ID
-	 */
-	private static final long serialVersionUID = 8570149956232085897L;
-
+public class BaseValue {
 	@Override
 	public String toString() {
 		return JSON.toJSONString(this);
 	}
-	
 }

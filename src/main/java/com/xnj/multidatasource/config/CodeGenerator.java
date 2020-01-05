@@ -18,7 +18,6 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
 
 //演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
@@ -58,11 +57,11 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/MULTI_DB_TEST?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true");
+        dsc.setUrl("jdbc:oracle:thin:@115.157.195.134:1521/orcl");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("MULTI_DB_TEST");
-        dsc.setPassword("123456");
+        dsc.setDriverName("oracle.jdbc.driver.OracleDriver");
+        dsc.setUsername("zzpower");
+        dsc.setPassword("zzpower12345");
         mpg.setDataSource(dsc);
 
         // 包配置
@@ -133,7 +132,7 @@ public class CodeGenerator {
         strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
-        // mpg.setStrategy(strategy);
+        mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new VelocityTemplateEngine());
         mpg.execute();
     }
